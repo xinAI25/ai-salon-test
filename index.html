@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AIサロンで最速キャッチアップ！ - 知識ゼロからでも大丈夫</title>
-    <meta name="description" content="AI学習サロンに参加して、プログラミング未経験からでもAIを習得しよう。たったの9,980円で始められます。">
+    <meta name="description" content="AI学習サロンに参加して、プログラミング未経験からでもAIを習得しよう。たったの3,980円で始められます。">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -40,7 +40,7 @@
 
         /* ヒーローセクション */
         .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.8) 0%, rgba(118, 75, 162, 0.8) 100%), url('hero-image.jpg') center/cover;
             color: white;
             text-align: center;
             padding: 80px 20px;
@@ -60,10 +60,31 @@
         }
 
         .hero-content {
-            max-width: 800px;
+            max-width: 1200px;
             margin: 0 auto;
             position: relative;
             z-index: 1;
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .hero-text {
+            flex: 1;
+            text-align: left;
+        }
+
+        .hero-image {
+            flex: 0 0 400px;
+            text-align: center;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
 
         .hero h1 {
@@ -281,6 +302,20 @@
             background: white;
         }
 
+        .testimonials-hero {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .testimonials-image {
+            width: 100%;
+            max-width: 800px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+        }
+
         .testimonials-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -473,6 +508,24 @@
                 padding: 60px 20px;
             }
             
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .hero-text {
+                text-align: center;
+            }
+            
+            .hero-image {
+                flex: none;
+                margin-top: 30px;
+            }
+            
+            .hero-image img {
+                max-width: 300px;
+            }
+            
             .section {
                 padding: 60px 20px;
             }
@@ -525,44 +578,49 @@
     <!-- ヒーローセクション -->
     <section class="hero" role="banner">
         <div class="hero-content">
-            <h1>AIサロンで最速キャッチアップ！</h1>
-            <p style="font-size: 1rem; opacity: 0.8; margin-bottom: 10px;">これはテスト用サイトです</p>
-            <p class="hero-subtitle">知識ゼロからでも大丈夫</p>
-            <div class="price-badge" aria-label="価格：たったの9,980円">
-                たったの9,980円
-            </div>
-            
-            <div class="countdown" aria-live="polite">
-                <h3>申込締切まで</h3>
-                <div class="countdown-timer" id="countdown">
-                    <div class="time-unit">
-                        <span class="time-value" id="days">0</span>
-                        <span class="time-label">日</span>
-                    </div>
-                    <div class="time-unit">
-                        <span class="time-value" id="hours">0</span>
-                        <span class="time-label">時間</span>
-                    </div>
-                    <div class="time-unit">
-                        <span class="time-value" id="minutes">0</span>
-                        <span class="time-label">分</span>
-                    </div>
-                    <div class="time-unit">
-                        <span class="time-value" id="seconds">0</span>
-                        <span class="time-label">秒</span>
+            <div class="hero-text">
+                <h1>AIサロンで最速キャッチアップ！</h1>
+                <p style="font-size: 1rem; opacity: 0.8; margin-bottom: 10px;">これはテスト用サイトです</p>
+                <p class="hero-subtitle">知識ゼロからでも大丈夫</p>
+                <div class="price-badge" aria-label="価格：たったの3,980円">
+                    たったの3,980円
+                </div>
+                
+                <div class="countdown" aria-live="polite">
+                    <h3>申込締切まで</h3>
+                    <div class="countdown-timer" id="countdown">
+                        <div class="time-unit">
+                            <span class="time-value" id="days">0</span>
+                            <span class="time-label">日</span>
+                        </div>
+                        <div class="time-unit">
+                            <span class="time-value" id="hours">0</span>
+                            <span class="time-label">時間</span>
+                        </div>
+                        <div class="time-unit">
+                            <span class="time-value" id="minutes">0</span>
+                            <span class="time-label">分</span>
+                        </div>
+                        <div class="time-unit">
+                            <span class="time-value" id="seconds">0</span>
+                            <span class="time-label">秒</span>
+                        </div>
                     </div>
                 </div>
+                
+                <a href="#apply" class="cta-button" aria-label="AIサロンに今すぐ申し込む">
+                    今すぐ申し込む
+                </a>
             </div>
-            
-            <a href="#apply" class="cta-button" aria-label="AIサロンに今すぐ申し込む">
-                今すぐ申し込む
-            </a>
+            <div class="hero-image">
+                <img src="ai-salon-photo1.png" alt="AIサロンの様子" loading="lazy">
+            </div>
         </div>
     </section>
 
     <!-- 比較セクション -->
     <section class="section comparison" id="comparison">
-        <h2>他社スクールとの圧倒的な差</h2>
+        <h2>他社スクールとの圧倒的な差！！</h2>
         <div class="comparison-table">
             <table>
                 <thead>
@@ -586,7 +644,7 @@
                     <tr>
                         <td><strong>必要スキル</strong></td>
                         <td>プログラミング基礎必須</td>
-                        <td class="highlight">完全未経験OK</td>
+                        <td class="highlight">完全未経験OK！！</td>
                     </tr>
                     <tr>
                         <td><strong>サポート</strong></td>
@@ -627,6 +685,9 @@
 
     <!-- 受講生の声セクション -->
     <section class="section testimonials" id="testimonials">
+        <div class="testimonials-hero">
+            <img src="testimonials-image.jpg" alt="学習コミュニティの様子" class="testimonials-image">
+        </div>
         <h2>受講生の声</h2>
         <div class="testimonials-grid">
             <div class="testimonial-card">
